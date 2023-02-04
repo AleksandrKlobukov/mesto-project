@@ -1,0 +1,25 @@
+.profile__add-button {
+    margin: 0;
+    padding: 14px 64px;
+    background: transparent url(../../../images/add-btn.svg) center no-repeat;
+    background-size: 22px;
+    border: 2px solid white;
+    border-radius: 2px; /* Взял только иконку «крестика» и сделал изменяющуюся границу. 
+                           Надеюсь правильно понял ваш комментарий. */
+    width: 150px;
+    height: 50px;
+    align-self: center;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+  
+  .profile__add-button:hover {
+    opacity: 0.6;
+  }
+  
+  @media screen and (max-width: 838px) {
+    .profile__add-button {
+      width: 282px;
+      background-size: 16px;
+    }
+  }
