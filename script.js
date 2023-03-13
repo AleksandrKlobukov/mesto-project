@@ -4,12 +4,12 @@ const cardsSection = document.querySelector(".elements__cards");
 const cardTemplate = document.querySelector("#element-template").content;
 const popupProfile = document.querySelector(".popup__profile");
 const profileCloseButton = popupProfile.querySelector(".popup__close-button");
-const profileSaveButton = popupProfile.querySelector(".form__submit");
+const profileSave = popupProfile.querySelector(".form");
 const popupItemTitle = popupProfile.querySelector(".popup__item_title");
 const popupItemSubtitle = popupProfile.querySelector(".popup__item_subtitle");
 const popupCardAdd = document.querySelector(".popup__card");
 const buttonClosePlace = popupCardAdd.querySelector(".popup__close-button");
-const buttonSavePlace = popupCardAdd.querySelector(".form__submit");
+const savePlace = popupCardAdd.querySelector(".popup__input");
 const popupCardName = popupCardAdd.querySelector(".popup__item_title");
 const popupCardSrc = popupCardAdd.querySelector(".popup__item_subtitle");
 const popupCardView = document.querySelector(".popup__img");
@@ -99,11 +99,11 @@ function openCardViewPopup(src, alt) {
 
 editButton.addEventListener("click", openProfilePopup);
 profileCloseButton.addEventListener("click", closeProfilePopup);
-profileSaveButton.addEventListener("click", saveProfileFromPopup);
+profileSave.addEventListener("submit", saveProfileFromPopup);
 
 addButton.addEventListener("click", openCardAddPopup);
 buttonClosePlace.addEventListener("click", () => closePopup(popupCardAdd));
-buttonSavePlace.addEventListener("click", saveCardfromPopup);
+savePlace.addEventListener("submit", saveCardfromPopup);
 buttonCloseView.addEventListener("click", () => closePopup(popupCardView));
 
 const initialCards = [
